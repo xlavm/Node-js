@@ -148,9 +148,7 @@ Sample Response
 Sample Response
 ```json
 {
-{
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1aXMgVmFuZWdhcyBNIiwidXNlciI6InhsYXZtIiwicGFzcyI6InhsYXZtIiwiaWF0IjoxNjEwMzk3ODc1LCJleHAiOjE2MTAzOTkzMTV9.3AtlPFxQhwiKpWhVEI8YJzYr39hke0GFHb56W7X2_o4"
-}
 }
 ```
 
