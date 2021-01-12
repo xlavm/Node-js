@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "eaad5403-5908-40f6-9023-51b14cc03d1a",
+		"name": "test-nodejs-mongoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete-work",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"work",
+						"5ffd06f5e0ed722ab84c76ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-work",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client",
+							"value": "Luis Vanegas 3645",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "es el mejor",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/work/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"work",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-work",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client",
+							"value": "Luis Va2333",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "es el mejor ualA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"work",
+						"5ffd06f5e0ed722ab84c76ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findall-work",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/work/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"work",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-work",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"work",
+						"5ffd06f5e0ed722ab84c76ae"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
