@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eaad5403-5908-40f6-9023-51b14cc03d1a",
+		"_postman_id": "727c0432-d1a8-4911-97b8-99ae6173a69b",
 		"name": "test-nodejs-mongoose",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,16 +15,11 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/5ffd06f5e0ed722ab84c76ae",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"work",
 						"5ffd06f5e0ed722ab84c76ae"
 					]
 				}
@@ -59,16 +54,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/work/",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"work",
 						""
 					]
 				}
@@ -96,16 +86,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/5ffd06f5e0ed722ab84c76ae",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"work",
 						"5ffd06f5e0ed722ab84c76ae"
 					]
 				}
@@ -118,16 +103,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/v1/work/",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"work",
 						""
 					]
 				}
@@ -147,21 +127,46 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/work/5ffd06f5e0ed722ab84c76ae",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/5ffd06f5e0ed722ab84c76ae",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"work",
 						"5ffd06f5e0ed722ab84c76ae"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PATH_SERVER",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "PATH_USER",
+			"value": "/api/v1/work"
 		}
 	]
 }

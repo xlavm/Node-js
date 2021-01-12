@@ -2,13 +2,15 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 require("dotenv").config();
+const cors = require('cors')
 
 var port = process.env.PORT
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false, }),);
+app.use(cors())
 
-mongoose.connect(process.env.PATH_MONGO, { useNewUrlParser: true })
+mongoose.connect(process.env.PATH_MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB Connected!'))
     .catch(err => console.log(err))
 

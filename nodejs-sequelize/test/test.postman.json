@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eb4e8dfd-a399-49af-88ab-90b298d0fb0b",
+		"_postman_id": "a36608b7-7cb5-4a72-b3af-5092d30052a8",
 		"name": "test-nodejs-sequelize",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,16 +15,11 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/4",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/4",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						"4"
 					]
 				}
@@ -64,16 +59,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						""
 					]
 				}
@@ -111,16 +101,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/7",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/7",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						"7"
 					]
 				}
@@ -133,16 +118,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						""
 					]
 				}
@@ -162,16 +142,11 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/1",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/1",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						"1"
 					]
 				}
@@ -184,16 +159,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/username/xlavm",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/username/xlavm",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						"username",
 						"xlavm"
 					]
@@ -229,22 +199,47 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/v1/user/login/",
-					"protocol": "http",
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/login/",
 					"host": [
-						"localhost"
+						"{{PATH_SERVER}}{{PATH_USER}}"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"v1",
-						"user",
 						"login",
 						""
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PATH_SERVER",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "PATH_USER",
+			"value": "/api/v1/user"
 		}
 	]
 }
