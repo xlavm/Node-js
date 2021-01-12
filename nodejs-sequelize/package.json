@@ -4,16 +4,15 @@
   "description": "this is the api-back",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server"
   },
   "keywords": [
     "nodejs",
-    "expressjs",
+    "express",
     "mysql",
-    "api",
-    "restfullapi",
-    "javascript"
+    "sequelize",
+    "jwt",
+    "api"
   ],
   "author": "Luis Angel Vanegas Martinez",
   "license": "ISC",
