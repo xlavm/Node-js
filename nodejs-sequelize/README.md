@@ -39,7 +39,7 @@ Import the script [test/test.postman.json](test/test.postman.json) into Postman
 ### Find-All
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/|GET|
+|/api/v1/user/|GET|
 
 Sample Response
 ```json
@@ -65,7 +65,7 @@ Sample Response
 ### Find
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/:id|GET|
+|/api/v1/user/:id|GET|
 
 Sample Response
 ```json
@@ -83,12 +83,12 @@ Sample Response
 ### Create
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/|POST|
+|/api/v1/user/|POST|
 
 Sample Response
 ```json
 {
-    "User Created Successfully!"
+    "User created Successfully!"
 }
 ```
 
@@ -98,12 +98,12 @@ Sample Response
 ### Update
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/:id|PUT|
+|/api/v1/user/:id|PUT|
 
 Sample Response
 ```json
 {
-    "User Updated successfully!"
+    "User updated successfully!"
 }
 ```
 
@@ -113,7 +113,7 @@ Sample Response
 ### Delete
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/:id|DELETE|
+|/api/v1/user/:id|DELETE|
 
 Sample Response
 ```json
@@ -128,7 +128,7 @@ Sample Response
 ### Username
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/username/:username|GET|
+|/api/v1/user/username/:username|GET|
 
 Sample Response
 ```json
@@ -143,7 +143,7 @@ Sample Response
 ### Login
 |Endpoint|Method|
 |:--|:--|
-|api/v1/user/login/|POST|
+|/api/v1/user/login/|POST|
 
 Sample Response
 ```json

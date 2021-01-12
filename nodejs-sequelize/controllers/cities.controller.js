@@ -18,7 +18,7 @@ exports.create = function (req, res) {
         if (result) {
             res.json('City Created Successfully!')
         } else {
-            res.json('There was an Error Creating the City')
+            res.json('There Was an Error Creating the City')
         }
     })
 };
@@ -33,7 +33,7 @@ exports.findOne = function (req, res) {
         if (cities) {
             res.json(cities)
         } else {
-            res.json('City does not exist in the DB')
+            res.json('City Does Not Exist in the DB')
         }
     })
 };
@@ -55,13 +55,13 @@ exports.update = function (req, res) {
                 }
             }).then(result => {
                 if (result) {
-                    res.json('City Updated successfully!')
+                    res.json('City Updated Successfully!')
                 } else {
-                    res.json('There was an Error Updating City')
+                    res.json('There Was an Error Updating City')
                 }
             })
         } else {
-            res.json('City does not exist in the DB')
+            res.json('City Does Not Exist in the DB')
         }
     })
 };
@@ -80,13 +80,13 @@ exports.delete = function (req, res) {
                 }
             }).then(result => {
                 if (result) {
-                    res.json('City removed successfully!')
+                    res.json('City Removed Successfully!')
                 } else {
-                    res.json('There was an Error Deleting City')
+                    res.json('There Was an Error Deleting City')
                 }
             })
         } else {
-            res.json('City does not exist in the DB')
+            res.json('City Does Not Exist in the DB')
         }
     })
 

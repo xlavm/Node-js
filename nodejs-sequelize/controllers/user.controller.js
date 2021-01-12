@@ -1,5 +1,4 @@
 const User = require('../models/user.model');
-//JWT for Security
 const jwt = require('jsonwebtoken')
 
 process.env.SECRET_KEY = 'secret'
@@ -10,14 +9,14 @@ exports.create = function (req, res) {
             user: req.body.user
         }
     }).then(user => {
-        if (user) { res.json('User already exists in the DB') }
+        if (user) { res.json('User Already Exists in the DB') }
         else {
             const userNew = new User(req.body);
             User.create(userNew.dataValues).then(result => {
                 if (result) {
                     res.json('User Created Successfully!')
                 } else {
-                    res.json('There was an Error Creating the User')
+                    res.json('There Was an Error Creating the User')
                 }
             })
         }
@@ -34,13 +33,13 @@ exports.update = function (req, res) {
         if (user) {
             User.update(userNew.dataValues, { where: { id: userNew.id, } }).then(result => {
                 if (result) {
-                    res.json('User Updated successfully!')
+                    res.json('User Updated Successfully!')
                 } else {
-                    res.json('There was an Error Updating User')
+                    res.json('There Was an Error Updating User')
                 }
             })
         } else {
-            res.json('User does not exist in the DB')
+            res.json('User Does Not Exist in the DB')
         }
     })
 };
@@ -58,13 +57,13 @@ exports.delete = function (req, res) {
                 }
             }).then(result => {
                 if (result) {
-                    res.json('User removed successfully!')
+                    res.json('User Removed Successfully!')
                 } else {
-                    res.json('There was an Error Deleting User')
+                    res.json('There Was an Error Deleting User')
                 }
             })
         } else {
-            res.json('User does not exist in the DB')
+            res.json('User Does Not Exist in the DB')
         }
     })
 
@@ -89,7 +88,7 @@ exports.findOne = function (req, res) {
         if (user) {
             res.json(user)
         } else {
-            res.json('User does not exist in the DB')
+            res.json('User Does Not Exist in the DB')
         }
     })
 };
@@ -103,7 +102,7 @@ exports.findForUsername = function (req, res) {
         if (user) {
             res.json(user)
         } else {
-            res.json('User does not exist in the DB')
+            res.json('User Does Not Exist in the DB')
         }
     })
 };
@@ -126,6 +125,6 @@ exports.login = function (req, res) {
             }
         })
         .catch(err => {
-            res.json('error: ' + err)
+            res.json('Error: ' + err)
         })
 };

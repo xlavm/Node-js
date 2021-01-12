@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "16b357ad-024b-4fa4-8365-645c12219641",
+		"name": "test-nodejs-dynamoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Luis Angel Vanegas Martinez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lavm@lavm.com",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "xlavm",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "xlavm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
+					"host": [
+						"{{PATH_SERVER}}{{PATH_USER}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findall-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/",
+					"host": [
+						"{{PATH_SERVER}}{{PATH_USER}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/1",
+					"host": [
+						"{{PATH_SERVER}}{{PATH_USER}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Luis Angel Vanegas Martinez 10",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lavm@lavm.com",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "xlavm",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "xlavm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/1",
+					"host": [
+						"{{PATH_SERVER}}{{PATH_USER}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{PATH_SERVER}}{{PATH_USER}}/1",
+					"host": [
+						"{{PATH_SERVER}}{{PATH_USER}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PATH_SERVER",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "PATH_USER",
+			"value": "/api/v1/user"
+		},
+		{
+			"value": "",
+			"disabled": true
+		}
+	]
+}

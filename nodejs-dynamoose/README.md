@@ -1,15 +1,16 @@
-# Node with Mongoose
+# Node with Dynamoose
 
 ## Configuration Initial
 
-1. Execute command `mongod`
-2. Execute command `mongo`
-3. Execute in the command line of mongo: `use api_db`
+1. Create collection in DynamoDB in AWS, o deploy an local server con DynamoDB
 4. Create the `.env` file in the equal route of package.json with this:
 ```
 PORT = 3000
-PATH_MONGO = mongodb://localhost:27017/api_db
-PATH_API_WORK = /api/v1/work
+PATH_DYNAMOLOCAL = http://localhost:8000
+PATH_USER = /api/v1/user
+AWS_REGION = us-east-1
+AWS_KEY_ID = 
+AWS_SECRET_KEY = 
 ```
 -----------------------
 ## Executing the API 
@@ -36,24 +37,26 @@ Import the script [test/test.postman.json](test/test.postman.json) into Postman
 ### Find-All
 |Endpoint|Method|
 |:--|:--|
-|/api/v1/work/|GET|
+|/api/v1/user/|GET|
 
 Sample Response
 ```json
-[
-    {
-        "_id": "5ffd12fb70931c35c0921fd3",
-        "client": "Luis Vanegas",
-        "comment": "he is the best",
-        "__v": 0
-    },
-    {
-        "_id": "5ffd134b70931c35c0921fd4",
-        "client": "Andrea Bermudez",
-        "comment": "she is wonderful",
-        "__v": 0
-    }
-]
+{
+    "user": [
+        {
+            "pass": "xlavm",
+            "user": "xlavm",
+            "id": "1",
+            "name": "Luis Angel Vanegas Martinez"
+        },
+        {
+            "pass": "xlavm",
+            "user": "xlavm",
+            "id": "10",
+            "name": "Luis Angel Vanegas Martinez 10"
+        }
+    ]
+}
 ```
 
 ---
@@ -62,15 +65,15 @@ Sample Response
 ### Find
 |Endpoint|Method|
 |:--|:--|
-|/api/v1/work/:id|GET|
+|/api/v1/user/:id|GET|
 
 Sample Response
 ```json
 {
-    "_id": "5ffd12fb70931c35c0921fd3",
-    "client": "Luis Vanegas",
-    "comment": "he is the best",
-    "__v": 0
+    "pass": "xlavm",
+    "user": "xlavm",
+    "id": "1",
+    "name": "Luis Angel Vanegas Martinez"
 }
 ```
 
@@ -80,12 +83,12 @@ Sample Response
 ### Create
 |Endpoint|Method|
 |:--|:--|
-|/api/v1/work/|POST|
+|/api/v1/user/|POST|
 
 Sample Response
 ```json
 {
-    "Work Created Successfully!"
+    "User created Successfully!"
 }
 ```
 
@@ -95,12 +98,12 @@ Sample Response
 ### Update
 |Endpoint|Method|
 |:--|:--|
-|/api/v1/work/:id|PUT|
+|/api/v1/user/:id|PUT|
 
 Sample Response
 ```json
 {
-    "Work Update Successfully!"
+    "User updated successfully!"
 }
 ```
 
@@ -110,13 +113,11 @@ Sample Response
 ### Delete
 |Endpoint|Method|
 |:--|:--|
-|/api/v1/work/:id|DELETE|
+|/api/v1/user/:id|DELETE|
 
 Sample Response
 ```json
 {
-    "Work Remove Successfully!"
+    "User removed successfully!"
 }
 ```
-
-

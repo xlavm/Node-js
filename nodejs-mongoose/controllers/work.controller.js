@@ -9,7 +9,7 @@ exports.create = async (req, res) => {
             const work = new Work(req.body);
             work.save().then(result => {
                 if (result) {
-                    res.json('Work Created successfully!');
+                    res.json('Work Created Successfully!');
                 } else {
                     res.json('There was an Error Creating the Work')
                 }
@@ -29,7 +29,7 @@ exports.update = async (req, res) => {
 
             result.save().then(result => {
                 if (result) {
-                    res.json('Work modified successfully!');
+                    res.json('Work Update Successfully!');
                 } else {
                     res.json('There was an Error Modifying the Work')
                 }
@@ -41,7 +41,7 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
     Work.findByIdAndDelete(req.params.id, (err, result) => {
         if (result) {
-            res.json('Work deleted successfully!')
+            res.json('Work Remove Successfully!')
         } else {
             res.json('The Work Does Not Exist in the DB');
         }

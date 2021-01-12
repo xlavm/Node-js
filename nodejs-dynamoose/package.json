@@ -9,16 +9,15 @@
   "keywords": [
     "nodejs",
     "express",
-    "mongodb",
-    "mongoose",
+    "dynamodb",
+    "dynamoose",
     "api"
   ],
   "author": "Luis Angel Vanegas Martinez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.1.6",
-    "mongoose": "^5.2.15"
+    "dynamoose": "^1.11.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4",
