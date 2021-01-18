@@ -12,9 +12,7 @@ exports.findAll = function (req, res) {
 
 exports.create = function (req, res) {
     const citiesNew = new Cyties(req.body);
-    Cyties.create({
-        name: citiesNew.name
-    }).then(result => {
+    Cyties.create(citiesNew.dataValues).then(result => {
         if (result) {
             res.json('City Created Successfully!')
         } else {
@@ -43,15 +41,13 @@ exports.update = function (req, res) {
     const citiesNew = new Cyties(req.body);
     Cyties.findOne({
         where: {
-            id: citiesNew.id,
+            id: req.params.id,
         }
     }).then(cities => {
         if (cities) {
-            Cyties.update({
-                name: citiesNew.name
-            }, {
+            Cyties.update(citiesNew.dataValues, {
                 where: {
-                    id: citiesNew.id,
+                    id: req.params.id,
                 }
             }).then(result => {
                 if (result) {
