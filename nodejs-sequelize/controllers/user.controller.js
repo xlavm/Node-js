@@ -27,11 +27,11 @@ exports.update = function (req, res) {
     const userNew = new User(req.body);
     User.findOne({
         where: {
-            id: userNew.id
+            id: req.params.id
         }
     }).then(user => {
         if (user) {
-            User.update(userNew.dataValues, { where: { id: userNew.id, } }).then(result => {
+            User.update(userNew.dataValues, { where: { id: req.params.id, } }).then(result => {
                 if (result) {
                     res.json('User Updated Successfully!')
                 } else {
