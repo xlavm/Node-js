@@ -1,10 +1,13 @@
 {
   "name": "api-back",
+  "author": "Luis Angel Vanegas Martinez",
+  "license": "ISC",
   "version": "1.0.0",
   "description": "this is the api-back",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "nodejs",
@@ -13,14 +16,12 @@
     "dynamoose",
     "api"
   ],
-  "author": "Luis Angel Vanegas Martinez",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "dynamoose": "^1.11.1"
+    "dynamoose": "^1.11.1",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
-    "dotenv": "^8.2.0"
+    "nodemon": "^1.19.4"
   }
 }
