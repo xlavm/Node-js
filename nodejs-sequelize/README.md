@@ -1,9 +1,8 @@
 # Node with Sequelize
 
-## Configuration Initial
+## Initial Configuration [Local]
 1. Create database executing the file `database/db-script.sql` into MySQL Server
-2. Modify the file `config/db.config.js` for the connection to database.
-3. Create the `.env` file in the equal route of package.json with this:
+2. Create the `.env` file in the equal route of package.json with this:
 ```
 PORT = 3000
 PATH_USER = /api/v1/user
@@ -15,7 +14,7 @@ DB_USER = root
 DB_PASS = 
 ```
 -----------------------
-## Executing the API 
+## API Execution [Local]
 1. Execute into the API
     ```
     npm install
