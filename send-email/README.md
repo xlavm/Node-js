@@ -1,18 +1,19 @@
-# Node with Mongoose
+# Send Email with Node
 
-## Configuration Initial
+## Initial Configuration
 
 1. Create the `.env` file in the equal route of package.json with this:
 ```
 PORT = 3000
 PATH_API_SEND_EMAIL = /api/v1/sendEmail
 SERVICE = gmail
-EMAIL_SENDER = angelvamart@gmail.com
+EMAIL_SENDER = myemail@gmail.com
 PASS_EMAIL_SENDER = my_password_of_email
 ```
 
-2. change the "Less secure app access" in your gmail account from this direction: `https://myaccount.google.com/lesssecureapps`
+2. change the "Less secure app access" in your gmail account from this direction: "https://myaccount.google.com/lesssecureapps"
 ![lessSecureAppAccess](docs/lesssecureappaccess.png)
+3. 
 
 
 -----------------------
