@@ -1,6 +1,6 @@
 # Send Email with Node
 
-## Initial Configuration
+## Initial Configuration [Local]
 
 1. Create the `.env` file in the equal route of package.json with this:
 ```
@@ -19,7 +19,7 @@ PASS_EMAIL_SENDER = my_password_of_email
 
 
 -----------------------
-## Executing the API 
+## Executing the API [Local]
 1. Execute into the API
     ```
     npm install

@@ -1,6 +1,6 @@
 # Node with Dynamoose
 
-## Configuration Initial
+## Initial Configuration [Local]
 
 1. Create collection in DynamoDB in AWS, o deploy an local server con DynamoDB
 4. Create the `.env` file in the equal route of package.json with this:
@@ -13,7 +13,7 @@ AWS_KEY_ID =
 AWS_SECRET_KEY = 
 ```
 -----------------------
-## Executing the API 
+## Executing the API [Local]
 1. Execute into the API
     ```
     npm install

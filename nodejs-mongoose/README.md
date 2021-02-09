@@ -1,6 +1,6 @@
 # Node with Mongoose
 
-## Configuration Initial
+## Initial Configuration [Local]
 
 1. Execute command `mongod`
 2. Execute command `mongo`
@@ -12,7 +12,7 @@ PATH_MONGO = mongodb://localhost:27017/api_db
 PATH_API_WORK = /api/v1/work
 ```
 -----------------------
-## Executing the API 
+## Executing the API [Local]
 1. Execute into the API
     ```
     npm install
