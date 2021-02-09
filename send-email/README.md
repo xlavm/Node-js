@@ -11,9 +11,11 @@ EMAIL_SENDER = myemail@gmail.com
 PASS_EMAIL_SENDER = my_password_of_email
 ```
 
-2. change the "Less secure app access" in your gmail account from this direction: "https://myaccount.google.com/lesssecureapps"
+2. change the "Less secure app access" in your gmail account from this direction: https://myaccount.google.com/lesssecureapps
 ![lessSecureAppAccess](docs/lesssecureappaccess.png)
-3. 
+
+3. accept unlock captcha in your email from this direction: https://accounts.google.com/b/0/DisplayUnlockCaptcha  be sure to change the number of URL for the number the you email, in my case is 0.
+![displayunlockcaptcha](docs/displayunlockcaptcha.png)
 
 
 -----------------------
