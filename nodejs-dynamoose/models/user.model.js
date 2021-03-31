@@ -6,7 +6,7 @@ dynamoose.AWS.config.update({
   region: process.env.AWS_REGION
 });
 
-//dynamoose.local(process.env.PATH_DYNAMOLOCAL);
+dynamoose.local(process.env.PATH_DYNAMOLOCAL);
 
 const userSchema = new dynamoose.Schema({
   id: {
