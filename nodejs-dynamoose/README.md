@@ -9,8 +9,8 @@ PORT = 3000
 PATH_DYNAMOLOCAL = http://localhost:8000
 PATH_USER = /api/v1/user
 AWS_REGION = us-east-1
-AWS_KEY_ID = 
-AWS_SECRET_KEY = 
+AWS_KEY_ID = AKID
+AWS_SECRET_KEY = SECRET
 ```
 -----------------------
 ## Executing the API [Local]
